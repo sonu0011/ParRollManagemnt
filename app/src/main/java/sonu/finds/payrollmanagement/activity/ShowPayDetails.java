@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +21,8 @@ public class ShowPayDetails extends AppCompatActivity  {
     String  emp_name,emp_insert,emp_id;
     long emp_basic_salary;
     PayRollViewModel model;
+    TableLayout tableLayout;
+    TextView notExist;
     float da,hra,ma,pa,gs,tax,netsallary;
     TextView t_da,t_hra,t_ma,t_empid,t_emp_name,t_pa,t_gs,t_tax,t_netsallary,basic_pay;
     private static final String TAG = "ShowPayDetails";
@@ -27,6 +31,8 @@ public class ShowPayDetails extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_pay_details);
+        tableLayout = findViewById(R.id.tableLayout);
+        notExist = findViewById(R.id.no_result_text);
         emp_insert = getIntent().getStringExtra("emp_insert");
         emp_id = getIntent().getStringExtra("emp_id");
         emp_name =  getIntent().getStringExtra("emp_name");
@@ -77,6 +83,13 @@ public class ShowPayDetails extends AppCompatActivity  {
                     + " pa is " + pa + " gross salary is " + gs + " tax is " + tax + "net sallary is " + netsallary);
 
             model.insert(new PayRollEntity(emp_name,emp_basic_salary, da, hra, ma, pa, gs, tax, netsallary));
+            model.getLastId().observe(this, new Observer<Long>() {
+                @Override
+                public void onChanged(@Nullable Long aLong) {
+                    t_empid.setText(String.valueOf(aLong));
+
+                }
+            });
             //Log.d(TAG, "onStart: inserted record is "+result);
 
 
@@ -104,7 +117,10 @@ public class ShowPayDetails extends AppCompatActivity  {
 
                          }
                          else {
-                             Toast.makeText(ShowPayDetails.this, "Employee Id does not exist", Toast.LENGTH_SHORT).show();
+                             tableLayout.setVisibility(View.GONE);
+                             notExist.setVisibility(View.VISIBLE);
+
+                             //Toast.makeText(ShowPayDetails.this, "Employee Id does not exist", Toast.LENGTH_SHORT).show();
                          }
                      }
                  });
