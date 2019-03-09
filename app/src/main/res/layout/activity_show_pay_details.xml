@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ShowPayDetails">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<TableLayout
+    android:stretchColumns="*"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableRow>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="Employee Id"
+            android:textSize="14sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="10000"
+            android:id="@+id/emp_id"
+            android:textSize="12dp" />
+    </TableRow>
+    <TableRow>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="Employee Name"
+            android:textSize="14sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="10000"
+            android:id="@+id/emp_name"
+            android:textSize="12dp" />
+    </TableRow>
+    <TableRow>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="Basic Pay"
+            android:textSize="14sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="10000"
+            android:id="@+id/basic_pay"
+            android:textSize="12dp" />
+    </TableRow>
+    <TableRow>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:text="Dearness Allowance \n(132 % of Basic Pay)
+"
+            android:textSize="14sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="10000"
+            android:id="@+id/da"
+            android:textSize="12dp" />
+    </TableRow>
+    <TableRow>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:text="House Rent Allowance\n(20 % of Basic Pay)
+"
+            android:textSize="14sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="10000"
+            android:id="@+id/hra"
+            android:textSize="12dp" />
+    </TableRow>
+    <TableRow>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dip"
+            android:text="Medical allowance\n(10 % of Basic Pay)"
+            android:textSize="14sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="10000"
+            android:id="@+id/ma"
+            android:textSize="12dp" />
+    </TableRow>
+    <TableRow>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="Phone Allowance"
+            android:textSize="14sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="500"
+            android:id="@+id/pa"
+            android:textSize="12dp" />
+    </TableRow>
+    <TableRow>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="Gross Salary"
+            android:textSize="14sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:id="@+id/gs"
+            android:text="10000"
+            android:textSize="12dp" />
+    </TableRow> <TableRow>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dip"
+        android:text="Tax \n(10 % of Gross Salary)"
+        android:textSize="14sp" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="18dip"
+        android:id="@+id/tax"
+        android:text="10000"
+        android:textSize="12dp" />
+</TableRow>
+    <TableRow>
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="Net salary \n(Gross Salary - Tax)"
+            android:textSize="14sp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="18dip"
+            android:text="10000"
+            android:id="@+id/ns"
+            android:textSize="12dp" />
+    </TableRow>
+</TableLayout>
+    </ScrollView>
+</RelativeLayout>
